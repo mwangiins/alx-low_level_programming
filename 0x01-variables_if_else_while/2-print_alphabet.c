@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+/**
+ * main - main function
+ *
+ * Return: 0 (Succcess)
+ */
+
+int main(void)
+{
+	char c;
+
+        for (c = 'a' ; c <= 'z' ; c++)
+		putchar(c);
+	putchar('\n');
+	return (0);
+}	
