@@ -4,7 +4,7 @@
 #include <stdio.h>
 /* betty style doc for function main goes there */
 /**
- * main -main function
+ * main - main function
  *
  * Return: o (Success)
  */
@@ -20,10 +20,10 @@ int main(void)
 	if (m > 5)
 		printf("Last digit of %d is %d and is greater than 5", n, m);
 	else if (m == 0)
-		printf("Last digit of %d and is 0", n, m);
+		printf("Last digit of %d is %d  and is 0", n, m);
 	else if (m < 6 && m != 0)
 		printf("Last digit %d is %d and is less than 6 and not 0", n, m);
-	print("\n");
+	printf("\n");
 
 	return (0);
 }
