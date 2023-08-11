@@ -1,13 +1,13 @@
 #include <stdio.h>
 /**
- * main - prints digits
+ * main - main function that prints
  *
- * Return: always 0
+ * Return: (0)
  *
  */
 int main(void)
 {
-	int i, r;
+	int i, j;
 	int a, b, c, d;
 
 	for (i = 0; i < 100; i++)
@@ -15,10 +15,10 @@ int main(void)
 		a = i / 10;
 		b = i % 10;
 
-		for (r = 0; r < 99; r++)
+		for (j = 0; j < 100; j++)
 		{
-			c = r / 10;
-			d = r % 10;
+			c = j / 10;
+			d = j % 10;
 
 			if (a < c || (a == c && b < d))
 			{
