@@ -1,24 +1,24 @@
 #include <stdio.h>
 /**
- * main - prints numbers of base
+ * main - prints numbers
  *
- * Return: always 0
+ * Return: always (0)
  *
  */
 int main(void)
 {
-	char i = '0';
-	char c = 'a';
+	char numb = '0';
+	char let = 'a';
 
-	while (i <= '9')
+	while (numb <= '9')
 	{
-		putchar(i);
-		c++;
+		putchar(numb);
+		numb++;
 	}
-	while (c <= 'f')
+	while (let <= 'f')
 	{
-		putchar(c);
-		c++;
+		putchar(let);
+		let++;
 	}
 	putchar('\n');
 	return (0);
