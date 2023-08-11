@@ -1,16 +1,19 @@
 #include <stdio.h>
 /**
- * main - main input
+ * main - print numbers
  *
- * Return: 0 (Succcess)
+ * Return: 0 (Success)
+ *
  */
-
 int main(void)
-{ 
-	int c;
+{
+	char c = '0';
 
-	for (c = 0 ; c < 10 ; c++)
-		printf("%d", c);
-	putchar("\n");
+	while (c <= '9')
+	{
+		putchar(c);
+		c++;
+	}
+	putchar('\n');
 	return (0);
-}	
+}
