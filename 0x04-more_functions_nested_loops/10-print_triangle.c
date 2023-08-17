@@ -14,14 +14,14 @@ else
 {
 int a, b;
 
-for (a = 0; a <= size; a++)
+for (a = 1; a <= size; a++)
 {
 for (b = a; b < size; b++)
 {
 _putchar(' ');
 }
 
-for (b = 0; b <= a; b++)
+for (b = 1; b <= a; b++)
 {
 _putchar('#');
 }
