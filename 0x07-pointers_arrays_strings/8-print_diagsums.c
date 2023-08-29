@@ -2,9 +2,10 @@
 #include <stdio.h>
 
 /**
- * print_diagsums -  a function that prints the sum of the two diagonals of a square matrix of integers
- * @a: pointer
+ * print_diagsums - a function that prints the sum of the two diagonals of a square matrix of integers
+ * @a: array
  * @size: size
+ * Return: 0
  */
 void print_diagsums(int *a, int size)
 {
