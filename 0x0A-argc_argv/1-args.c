@@ -1,27 +1,22 @@
-#include "main.h"
 #include <stdio.h>
-
+#include "main.h"
 /**
-* main - a program that prints the number of arguments passed into it
-* @argc: number of arguments
-* @argv: array that contains the argument
-* Return: 0
-*/
+ * main -  a program that prints the number of arguments
+ * @argc: number of arguments
+ * @argv: array containing the arguments
+ * Return: 0
+ */
 int main(int argc, char *argv[])
 {
-int c;
-
+(void)argv;
 if (argc == 1)
 {
-printf("%d\n", argc - 1);
+printf("0\n");
 }
 else
 {
-for (c = 0; argv[c] != NULL; c++)
-{
-printf("%d\n", c - 1);
-}
-}
-return (0);
+printf("%d\n", argc - 1);
 }
 
+return (0);
+}
