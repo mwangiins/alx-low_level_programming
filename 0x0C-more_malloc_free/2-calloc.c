@@ -22,7 +22,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	
+
 	func = pnt;
 
 	for (s = 0; s < (nmemb * size); s++)
