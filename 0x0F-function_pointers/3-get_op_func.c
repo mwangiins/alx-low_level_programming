@@ -1,7 +1,7 @@
 #include "3-calc.h"
 #include <stdlib.h>
 /**
- * get_op_func - pointer selects the correct function to perform the operation 
+ * get_op_func - pointer selects the correct function to perform the operation
  * @s: The operator passed as argument.
  *
  * Return: A pointer to the function that corresponds
@@ -20,7 +20,7 @@ int (*get_op_func(char *s))(int, int)
 
 	int c = 0;
 
-	while (ops[c].op != NULL && *(ops[i].op) != *s)
+	while (ops[c].op != NULL && *(ops[c].op) != *s)
 		c++;
 
 	return (ops[c].f);
