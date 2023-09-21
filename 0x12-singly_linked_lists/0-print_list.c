@@ -8,10 +8,9 @@
 
 size_t print_list(const list_t *h)
 {
-	size_t headst;
+	size_t headst = 0;
 
-	headst = 0;
-	while (h != NULL)
+	while (h)
 	{
 		if (h->str == NULL)
 			printf("[%d] %s\n", 0, "(nil)");
