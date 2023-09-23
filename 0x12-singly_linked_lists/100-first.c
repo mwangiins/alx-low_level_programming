@@ -1,13 +1,12 @@
-#include "lists.h"
+#include <stdio.h>
 
-void before(void) __attribute__ ((constructor));
 /**
- * before - prints a string before main function
- *
+ * hundred - function to be executed
+ * Return:void
  */
 
-void before(void)
+void __attribute__ ((constructor)) hundred()
 {
-	printf("You're beat! and yet, you must allow,\n");
-	printf("I bore my house upon my back!\n ");
+	printf("You're beat! and yet, you must allow");
+	printf(",\nI bore my house upon my back!\n");
 }
