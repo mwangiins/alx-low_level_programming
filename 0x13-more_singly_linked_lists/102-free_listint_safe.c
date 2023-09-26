@@ -1,44 +1,72 @@
 #include "lists.h"
-#include <stdlib.h>
 
 /**
- * print_listint_safe - Prints a listint_t linked list safely.
- * @head: A pointer to the head of the list.
+ * free_listp - frees a linked list
+ * @head: head of a list.
  *
- * Return: The number of nodes in the list.
+ * Return: void
  */
-size_t print_listint_safe(const listint_t *head)
+void free_listp(listp_t **head)
 {
-    size_t num_nodes = 0;
-    listp_t *hptr = NULL, *new, *add;
+	listp_t *temp;
+	listp_t *current;
 
-    while (head != NULL)
-    {
-        new = malloc(sizeof(listp_t));
-        if (new == NULL)
-            exit(98);
-
-        new->p = (void *)head;
-        new->next = hptr;
-        hptr = new;
-
-        add = hptr;
-
-        while (add->next != NULL)
-        {
-            add = add->next;
-            if (head == add->p)
-            {
-                printf("-> [%p] %d\n", (void *)head, head->n);
-                return (num_nodes);
-            }
-        }
-
-        printf("[%p] %d\n", (void *)head, head->n);
-        head = head->next;
-        num_nodes++;
-    }
-
-    return (num_nodes);
+	if (head != NULL)
+	{
+		current = *head;
+		while ((temp = current) != NULL)
+		{
+			current = current->next;
+			free(temp);
+		}
+		*head = NULL;
+	}
 }
 
+/**
+ * free_listint_safe - frees a list.
+ * @h: head of a list.
+ *
+ * Return: the size of the list.
+ */
+size_t free_listint_safe(listint_t **h)
+{
+	size_t new_nodes = 0;
+	listp_t *pos, *prt, *sum;
+	listint_t *current;
+
+	pos = NULL;
+	while (*h != NULL)
+	{
+		prt = malloc(sizeof(listp_t));
+
+		if (prt == NULL)
+			exit(98);
+
+		prt->p = (void *)*h;
+		prt->next = pos;
+		pos = prt;
+
+		sum = pos;
+
+		while (sum->next != NULL)
+		{
+			sum = sum->next;
+			if (*h == sum->p)
+			{
+				*h = NULL;
+				free_listp(&pos);
+				return (new_nodes);
+			}
+		}
+
+		current = *h;
+		*h = (*h)->next;
+		free(current);
+		new_nodes++;
+	}
+
+	*h = NULL;
+	free_listp(&pos);
+	return (new_nodes);
+}
