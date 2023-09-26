@@ -1,18 +1,5 @@
 #include "lists.h"
 /**
- * struct listp_p - singly linked list of pointers
- * @p: pointer
- * @next: pointer to next node
- *
- * Description: singly linked list node structure
- */
-typedef struct listp_p
-{
-	void *p;
-	struct listp_p *next;
-} listp_t;
-
-/**
  * free_listp_safe - frees a linked list
  * @head: head of a list
  *

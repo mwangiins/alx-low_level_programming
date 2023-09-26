@@ -1,13 +1,13 @@
 #ifndef LISTS_H
 #define LISTS_H
-
 #include <stdio.h>
 #include <stdlib.h>
+#include <strings.h>
 
 /**
  * struct listint_s - singly linked list
- * @n: integer
- * @next: points to the next node
+ * @n: integer data
+ * @next: pointer to the next node
  *
  * Description: singly linked list node structure
  *
@@ -17,6 +17,19 @@ typedef struct listint_s
     int n;
     struct listint_s *next;
 } listint_t;
+
+/**
+ * struct listp_s - singly linked list
+ * @p: pointers of nodes
+ * @next: points to the next node
+ *
+ * Description: singly linked list containing pointers
+ */
+typedef struct listp_s
+{
+	void *p;
+	struct listp_s *next;
+} listp_t;
 
 int _putchar(char c);
 size_t print_listint(const listint_t *h);
@@ -32,4 +45,5 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
 listint_t *reverse_listint(listint_t **head);
 size_t print_listint_safe(const listint_t *head);
+size_t free_listint_safe(listint_t **h);
 #endif
