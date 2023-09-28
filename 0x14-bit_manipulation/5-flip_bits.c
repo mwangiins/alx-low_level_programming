@@ -18,5 +18,5 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 		find += res & 1;
 		res >>= 1;
 	}
-	return find;
+	return (find);
 }
