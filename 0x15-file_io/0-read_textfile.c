@@ -31,9 +31,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	bytr = read(fd, buffer, letters);
 	if (bytr == -1)
+	close(fd);
 	{
 		free(buffer);
-		close(fd);
 		return (0);
 	}
 	bytw = write(STDOUT_FILENO, buffer, bytr);
